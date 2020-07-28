@@ -1,0 +1,116 @@
+.App {
+  text-align: center;
+  background-color: black;
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+header {
+  margin-top: 0;
+  margin-bottom: 10px;
+  padding: 0px;
+
+}
+
+header h1{
+  font-size: 3.5em;
+  font-family: "Verdana";
+  width: 900px;
+  margin-right: auto;
+  color: #fa5073;
+}
+
+header img{
+  width: 10%;
+  vertical-align: -20px;
+}
+
+.title h1 {
+  position: relative;
+  padding: 0.25em 0;
+  width: 900px;
+  margin-right: auto;
+  margin-left: auto;
+}
+.title h1:after {
+  content: "";
+  display: block;
+  height: 4px;
+  background: -webkit-linear-gradient(to right, rgb(255, 186, 115), #ffb2b2);
+  background: linear-gradient(to right, rgb(255, 186, 115), #ffb2b2);
+}
+.content{
+  display: flex;
+  width:900px;
+  padding-top: 2em;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.contorl_m5{
+  width:500px;
+  display: flex;
+  padding-top: 2em;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+/* チェックボックスの非表示 */
+.switch input[type=checkbox] {
+  display: none;
+}
+
+/* ラベル要素の中身のスタイル（具体的にはスイッチ部分） */
+.switch label {
+  padding: 12px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* ラベル要素の中身の直前にスイッチのON部分追加 */
+.switch label:before {
+  padding: 6px 10px;
+  content: 'ON';
+  border-radius: 6px 0 0 6px;
+  background: linear-gradient(to bottom, #F0F0F0 0%, #DDD 100%);
+  box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.1) inset;
+  color: #333;
+}
+
+/* ラベル要素の中身の直前にスイッチのOFF部分追加 */
+.switch label:after {
+  padding: 6px 10px;
+  content: 'OFF';
+  border-radius: 0 6px 6px 0;
+  background: #C30;
+  box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.1) inset;
+  color: #FFF;
+}
+
+/* スイッチがOFF状態の場合ON部分のホバーは透かしを入れる */
+.switch input+label:hover:before {
+  opacity: 0.5;
+}
+
+/* スイッチがON状態の場合OFF部分のホバーは透かしを入れる */
+.switch input:checked+label:hover:after {
+  opacity: 0.5;
+}
+
+/* スイッチがON状態でONに色をつける */
+.switch input:checked+label:before {
+  background: #9C0;
+  color: #FFF;
+  opacity: 1;
+}
+/* スイッチがOFF状態でOFFに色をつける */
+.switch input:checked+label:after {
+  background: linear-gradient(to bottom, #F0F0F0 0%, #DDD 100%);
+  color: #333;
+}
+
+
